@@ -52,8 +52,11 @@ Please refer to the github page for more details.
 ## Table Explanation
 We extract all relevant data from dataset under the Google Cloud till 2019-12-31 23:59:45 UTC, which amounts to all blocks from genesis (#0) up to #9193265. The entire blockchain data is stored in seven different tables, out of which, we extract data from `contracts`, `token transfers`, `traces`, and `transactions` tables for our temporal analysis.
 
-* The trace table stores executions of all recorded messages and transactions (successful ones) in the Ethereum blockchain. This is the most comprehensive tables for analysis. * The transactions table contains all transaction details such as source and target address, and amount of ether transferred. 
+* The trace table stores executions of all recorded messages and transactions (successful ones) in the Ethereum blockchain. This is the most comprehensive tables for analysis.  
+* The transactions table contains all transaction details such as source and target address, and amount of ether transferred. 
+
 * The contracts table contains all Contract Accounts, their byte code and other properties of byte code such as block_timestamp}, block_number, token types (e.g., ERC721, ERC20). 
+
 * The token transfers table focuses on all transactions with tokens from one 20-byte address to another 20-byte address on the blockchain.
 
 
