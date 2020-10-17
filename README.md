@@ -1,5 +1,3 @@
-# Ethereum-analysis
-
 # Temporal-Analysis-of-the-Entire-Ethereum-Blockchain-Network
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
