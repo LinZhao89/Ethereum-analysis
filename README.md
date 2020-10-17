@@ -32,7 +32,7 @@ With over 42 billion USD market capitalization (October 2020), Ethereum is the l
 
 
 Replace .csv with .txt or .json as per your preference.
-Pip install gsutil, open command line and download the files. (Tried with Python 2.7 in Ubuntu)
+Pip install gsutil
 For downloaded entire folder: gsutil -m cp -r gs://bucketname/folder-name local-location
 For downloaded multiple files: gsutil -m cp -r gs://bucketname/folder-name/filename* local-location
 
