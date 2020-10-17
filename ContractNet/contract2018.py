@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Mar 17 00:22:01 2020
-
+This file is to extract edgelist and form the address hash table from data extracted from google bigquery.
 """
 
 #*****************************************************************************************#
