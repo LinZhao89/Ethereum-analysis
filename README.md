@@ -15,8 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-With over 42 billion USD market capitalization (October 2020), Ethereum is the largest public blockchain that supports smart contracts. Recent works have modeled transactions, tokens, and other interactions in the Ethereum blockchain as static graphs to provide new observations and insights by conducting relevant graph analysis. Surprisingly, there is much less study on the evolution and temporal properties of these networks. In this paper, we investigate the evolutionary nature of Ethereum interaction networks from a temporal graphs perspective.
+xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 <!-- Data Extraction -->
