@@ -21,7 +21,7 @@ In this project, we investigate the evolutionary nature of Ethereum interaction 
 
 <!-- Data Extraction -->
 ## Data Extraction 
-Due to the size limitation, instead of uploading the dataset, we will introduce the extraction method we are using to obtain the data. We also demonstrate a sample edge list and corresponding address hased table split by year and by month (only for Contract Net).
+Due to the size limitation, instead of uploading the dataset, we will introduce the extraction method we are using to obtain the data. We also demonstrate a sample edge list and corresponding address hased table split by year and by month (only for Contract Net) in each folder.
 ### Google bigquery
 
 1. Apply and login to Google Cloud Platform account.
