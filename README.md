@@ -16,12 +16,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-xxxxxxxxxxxxxxxxxxxxxxxxxx
+In this project, we investigate the evolutionary nature of Ethereum interaction networks from a temporal graph perspective. 
 
 
 <!-- Data Extraction -->
 ## Data Extraction 
-
+Due to the size limitation, instead of uploading the dataset, we will introduce the extraction method we are using to obtain the data. We also demonstrate a sample edge list and corresponding address hased table split by year and by month (only for Contract Net).
 ### Google bigquery
 
 1. Apply and login to Google Cloud Platform account.
