@@ -93,8 +93,7 @@ with open(f, "r") as gFile:
                     # row[15]is status
                     if rows[15] == '1':
                         if ((rows[2] != '') and (rows[3] != '')):
-                            # in the same time, this address can be found in contract net, means, it is smart contract 
-                            if ((contracts.get(rows[2]) is not None) and ((contracts.get(rows[3])) is not None)):
+                                if ((contracts.get(rows[2]) is not None) and ((contracts.get(rows[3])) is not None)):
                                 #<e, from, to, value, gas, gas used, txnhash, contract addr, contract type, block num>
                                 if nodes.get(rows[2]) is None:
                                     nodes.update({rows[2] : n})
