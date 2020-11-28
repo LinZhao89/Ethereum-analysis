@@ -15,13 +15,7 @@ Created on Tue Mar 17 00:22:01 2020
 #```taken from `bigquery-public-data.ethereum_blockchain.traces`                          #
 #```taken from `bigquery-public-data.ethereum_blockchain.contracts`                       #
 #*****************************************************************************************#
-'''
-Some transactions create smart contracts from their input bytes, and this smart contract is stored at a particular 20-byte address.
-This table contains a subset of Ethereum addresses that contain contract byte-code, as well as some basic analysis of that byte-code.
-Introduction of contract net, this means trace/transaction create from2015 should have same address recorded as smart contract addr
 
-statusEither 1 (success) or 0 (failure, due to any operation that can cause the call itself or any top-level call to revert)
-'''
 import csv
 import sys
 import datetime
