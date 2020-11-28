@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Aug  4 23:59:28 2020
 
-@author: zhao lin 
-
-implement random forest algorithm for training 
-"""
 from sklearn.ensemble import RandomForestClassifier 
 import pandas as pd
 import numpy as np
@@ -20,31 +13,9 @@ import csv
 year = "2019_"
 
 name  = "1-3_to_4_4more_"    
-# name  = "1-3_to_4_"
-#name  = "2-4_to_5_"  
-name  = "2-4_to_5_4more_"   
-name = '3-5_to_6_4more_'
-### name = '4-6_to_7_'
-#name = '4-6_to_7_4more_'
-name = '5-7_to_8_4more_'
-### name = '6-8_to_9_'
-#name = '6-8_to_9_4more_'
-##name = '7-9_to_10_4more_'
-name = '8-10_to_11_4more_'
-name = '9-11_to_12_4more_'
-#name = '10-12_to_1_'
-# name = '4-6_to_next6_'
-# name = '5-7_to_next7_'
-# name = '3-5_to_next5_'
-# name = '1-3_to_next3_'
-# name = '6-8_to_next8_'
-# name = '7-9_to_next9_'
-# name = '8-10_to_next10_'
-# name = '2-4_to_next4_'
-# name = '9-11_to_next11_'
-# name = '10-12_to_next12_'
 
-path2 ="E:/blockchain data at sch/New folder/blockchain/submission/original/contract/byMonth/3month_data/multilabel/"
+
+path2 ="D:/"
 good = pd.read_csv(path2+year+name+"matchGraph_features_more4_growth_multiG.csv", header='infer')
 good['label']=1
 bad = pd.read_csv(path2+year+name+"matchGraph_features_more4_growth_die_multiG1.csv", header='infer')
@@ -94,10 +65,6 @@ for each in random_state:
     
 ave_acc = total_acc/count
 print('Average Accuracy: ',ave_acc)
-
-# df2=pd.DataFrame(feature_importances)
-# # df2.columns=['properties','importance']
-# df2.to_csv(path2+name+"RF_result.csv", index=True,header=True)
 
 with open(path2+year+name+"RF_result.csv", 'a', newline='') as file1:
     writer1 = csv.writer(file1)

@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Aug  1 15:07:12 2020
 
-@author: linzhao2
-
-build logistic regression model to predict group growth or die 
-"""
 import csv
 import pandas as pd
 import numpy as np
@@ -26,10 +19,10 @@ name = '6-8_to_9_4more_'
 name = '7-9_to_10_4more_'
 name = '8-10_to_11_4more_'
 # name = '9-11_to_12_4more_'
-# #name = '10-12_to_1_'
 
 
-path2 ="D:/blockchain data at sch/New folder/blockchain/submission/original/contract/byMonth/3month_data/multilabel/"
+
+path2 ="D:/"
 good = pd.read_csv(path2+"year2018_train_data/good/"+year+name+"matchGraph_features_more4_growth_multiG.csv", header='infer')
 good['label']=1
 bad = pd.read_csv(path2+"year2018_train_data/bad/" +year+name+"matchGraph_features_more4_growth_die_multiG1.csv", header='infer')

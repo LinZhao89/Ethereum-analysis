@@ -16,18 +16,14 @@ while True:
     except OverflowError:
         maxInt = int(maxInt/10)
         
-path2 ="/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/"
+path2 ="D/"
 path1 =path2 + "2018/"
 
 nod =path1 + "contract_net_address_hash_2018_full.csv"
 node_list = pd.read_csv(nod, header = None)
 
-# path2 ="D:/blockchain data at sch/New folder/blockchain/submission/original/contract/"
-
-#path2="/home/LinZamOu/graph/blockchain/contract/"
 year = "byMonth/3month_data/label/short/2018_"
 
-# year2 = "byMonth/3month_data/multilabel/2018_10/"
 year2 = "byMonth/3month_data/multilabel/2018_9_2more/"
 
 jan1 = path2+year+"jan.csvtest.txt"
@@ -46,10 +42,7 @@ dec1 = path2+year+"dec.csvtest.txt"
 
 month = "9"
 janfeb=path2+year+"jun.csvtest.txt"
-#janfeb = path2+"byMonth/3month_data/train/2016_jan_feb_mar.csvtest.txt"
-# janfeb=path2+"contract_net_2016_fulltest.txt"
 
-# node_list = pd.read_csv(nod, header = None)
 multiGraph = Graph.Read_Edgelist(sep1, directed=True) # produce multiDigraphi 
 #simpleGraph = multiGraph.simplify(multiple=True, loops=True, combine_edges=None)
 simpleGraph = multiGraph
@@ -83,99 +76,3 @@ for idx in range(len(all_subgraaph)):
         df_merge_real=pd.DataFrame(each_edge_real)                           
         df_merge_real.to_csv(path2+year2+"hashed/"+"2moreThannode_"+month+str(count)+"_eachGraph.csv", index=False,header=False)
         df_merge.to_csv(path2+year2+"index/"+ "2moreThannode_"+month+str(count)+"_eachGraph.csv", index=False,header=False)
-'''
-with open(path2+year2+month+"_contract2016_summary_multilevel.csv", 'w', newline='') as file1:
-    writer1 = csv.writer(file1)
-    writer1.writerow(["giantE", "giantV", "count"])
-    writer1.writerow([mainE, mainV, count])
-print("scc: ", datetime.datetime.now())
-'''
-# count1=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 2:
-#         count1+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"2moreThannode_"+month+str(count1)+"_eachGraph.csv", index=False,header=False)
-# count2=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 3:
-#         count2+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"3moreThannode_"+month+str(count2)+"_eachGraph.csv", index=False,header=False)
-# count3=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 4:
-#         count3+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"4moreThannode_"+month+str(count3)+"_eachGraph.csv", index=False,header=False)
-# count4=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 5:
-#         count4+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"5moreThannode_"+month+str(count4)+"_eachGraph.csv", index=False,header=False)
-# count5=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 6:
-#         count5+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"6moreThannode_"+month+str(count5)+"_eachGraph.csv", index=False,header=False)
-# count6=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 7:
-#         count6+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"7moreThannode_"+month+str(count6)+"_eachGraph.csv", index=False,header=False)
-        
-# count7=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 8:
-#         count7+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"8moreThannode_"+month+str(count7)+"_eachGraph.csv", index=False,header=False)
-# print("scc: ", datetime.datetime.now())        
-# count8=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 9:
-#         count8+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"9moreThannode_"+month+str(count8)+"_eachGraph.csv", index=False,header=False)
-        
-# count9=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 10:
-#         count9+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"10moreThannode_"+month+str(count9)+"_eachGraph.csv", index=False,header=False)
-        
-# count10=0
-# for idx in range(len(all_subgraaph)):
-#     if all_subgraaph[idx].vcount() > 11:
-#         count10+=1
-#         each_edge = all_subgraaph[idx].get_edgelist()
-#         #    print(each_edge)
-#         df_merge=pd.DataFrame(each_edge)
-#         df_merge.to_csv(path2+year2+"11moreThannode_"+month+str(count10)+"_eachGraph.csv", index=False,header=False)
-
-# out = pd.Series(membership, ind)
-# merges_val = walk_result_apr.merges
-#df_merge=pd.DataFrame(membership)
-#df_merge.to_csv(path2+year2+month+"_contract2017__simple.csv", index=True)

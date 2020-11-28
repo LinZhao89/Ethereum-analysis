@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Aug  1 15:07:12 2020
 
-@author: linzhao2
-
-build logistic regression model to predict group growth or die 
-"""
 import csv
 import pandas as pd
 import numpy as np
@@ -23,7 +16,7 @@ import pandas as pd
 import csv
 import sys
 
-path2 ="D:/blockchain data at sch/New folder/blockchain/submission/original/contract/byMonth/3month_data/multilabel/year2018_train_data/"
+path2 ="D:/"
 entries = os.listdir(path2+"good/")
 
 good_all = pd.DataFrame()
@@ -90,7 +83,6 @@ for each in random_state:
     df2=pd.DataFrame(sorted_important_features)
     df2.columns=['properties','importance']
     df2.to_csv(path2+"logisticRegression_result.csv", mode = 'a',index=False,header=True)
-#    xxx= sorted(feature_import_dict.values())
     
     y_pred=logistic_regression.predict(X_test1)
     confusion_matrix = pd.crosstab(y_test, y_pred, rownames=['Actual'], colnames=['Predicted'])
@@ -105,10 +97,6 @@ for each in random_state:
 ave_acc = total_acc/count
 print('Average Accuracy: ',ave_acc)
 
-
-# with open(path2+name+"logisticRegression_result.csv", 'a', newline='') as file1:
-#     writer1 = csv.writer(file1)
-#     writer1.writerow('accuracy: ' + str(ave_acc))
     
 with open(path2+"2018_LR_result.csv", 'a', newline='') as file1:
     writer1 = csv.writer(file1)

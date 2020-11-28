@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 31 17:13:35 2020
 
-@author: linzhao2
-
-baseed on the file name to load in each graph => calcuate the properties for each graph 
-"""
 import os
 import igraph
 from igraph import *
@@ -26,16 +20,9 @@ while True:
 
 name = "1-3_to_4_"       
 name2 = "2016_123/2/"
-path2 ="E:/blockchain data at sch/New folder/blockchain/submission/original/contract/"
-#path2 ="/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/"
+path2 ="D/"
 year= "byMonth/3month_data/multilabel/"
 
-# jan1 = path2+year+"jan.csvtest.txt"
-# janfeb=path2+"contract_net_2016_fulltest.txt"
-
-# node_list = pd.read_csv(nod, header = None)
-#multiGraph = Graph.Read_Edgelist(aug1, directed=True) # produce multiDigraph 
-#simpleGraph = multiGraph.simplify(multiple=True, loops=True, combine_edges=None)
 filelist = pd.read_csv(path2+year+name+"matchGraph_name_growthg2g1.csv", header=None)
 filelist.columns=['90days', 'dec']
 filelist1 = filelist.drop_duplicates(subset=['90days'])

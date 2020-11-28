@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul 31 17:13:35 2020
 
-@author: linzhao2
-
-baseed on the file name to load in each graph => calcuate the properties for each graph 
-"""
 import os
 import igraph
 from igraph import *
@@ -26,8 +19,8 @@ while True:
 
 name = "2019_7-9_to_10_4more_"
 name2="2019_789_4more/index/"
-# path2 ="D:/blockchain data at sch/New folder/blockchain/submission/original/contract/"
-path2 ="/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/"
+path2 ="D:/"
+
 year= "byMonth/3month_data/multilabel/"
 
 # jan1 = path2+year+"jan.csvtest.txt"
@@ -112,22 +105,3 @@ df2.columns=['num_node','num_edge','density','transitivity','sum_triangle','ave_
              ,'cohesion','reciprocity','assort','diameter','radius']
 df2.to_csv(path2+year+name + "matchGraph_features_more4_growth_die_multiG1.csv", index=False,header=True)
 
-
-'''
-### shortest path length
-shortestpath_length = g1.shortest_paths(mode=ALL)
-total_dist = 0
-count1=0
-for each in range(len(shortestpath_length)): 
-sum_dist=0
-for i in shortestpath_length[each]:
-if i != float("inf"):
-    sum_dist= sum_dist+i
-    count1+=1
-# print(f' sum_dist----: {sum_dist}')
-total_dist = total_dist+sum_dist
-# print (f' total_dist=========== : {total_dist}')
-if count1 != 0:
-ave_shortest_path = total_dist/count1
-print(f'wcc ave_shortest {ave_shortest_path}')
-'''

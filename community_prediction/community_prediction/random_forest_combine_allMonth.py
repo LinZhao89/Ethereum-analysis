@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Aug  4 23:59:28 2020
 
-@author: zhao lin 
-
-implement random forest algorithm for training 
-"""
 from sklearn.ensemble import RandomForestClassifier 
 import pandas as pd
 import numpy as np
@@ -31,7 +24,7 @@ maxInt = sys.maxsize
 
 year = "2018_"
 name = 'all_'
-path2 ="D:/blockchain data at sch/New folder/blockchain/submission/original/contract/byMonth/3month_data/multilabel/year2018_train_data/"
+path2 ="D:/"
 entries = os.listdir(path2+"good/")
 
 good_all = pd.DataFrame()
@@ -102,10 +95,6 @@ for each in random_state:
     
 ave_acc = total_acc/count
 print('Average Accuracy: ',ave_acc)
-
-# df2=pd.DataFrame(feature_importances)
-# # df2.columns=['properties','importance']
-# df2.to_csv(path2+name+"RF_result.csv", index=True,header=True)
 
 with open(path2+year+name+"RF_result.csv", 'a', newline='') as file1:
     writer1 = csv.writer(file1)
