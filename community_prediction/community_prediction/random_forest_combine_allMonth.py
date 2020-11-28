@@ -19,9 +19,6 @@ import csv
 import sys
 maxInt = sys.maxsize
 
-
-
-
 year = "2018_"
 name = 'all_'
 path2 ="D:/"
@@ -60,9 +57,7 @@ for each in random_state:
     print(f' --------current state: {each}--------\n')
 
     X_train,X_test,y_train,y_test = train_test_split(total_data.iloc[:,0:13],total_data['label'],test_size=0.2,random_state=each,stratify=total_data['label'])
-    # scaler = MinMaxScaler()
-    # scaler.fit(X_train)
-    #print(scaler.data_max_)
+
     X_train = X_train.fillna(0)
     X_test = X_test.fillna(0)
     
@@ -73,13 +68,11 @@ for each in random_state:
     
     w = {0:1, 1:1} #{class_label: weight, class_label: weight}
     rf = RandomForestClassifier(n_estimators=100,max_features='auto',criterion='entropy',max_depth=None,min_samples_leaf=1, class_weight=w)
-    # rf = RandomForestClassifier()
     rf.fit(X_train1,y_train)
     
     score = rf.score(X_test1, y_test)
     feature_importances = pd.DataFrame(rf.feature_importances_, index = X_train.columns, columns = ['importance']).sort_values('importance', ascending=False)
     df2=pd.DataFrame(feature_importances)
-    # df2.columns=['properties','importance']
     df2.to_csv(path2+year+name+"RF_result.csv",mode='a', index=True,header=True)
     print(f'score: {score}')
     print(f'feature_importance {feature_importances}')

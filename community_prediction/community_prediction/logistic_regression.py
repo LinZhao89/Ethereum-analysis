@@ -11,13 +11,13 @@ import matplotlib.pyplot as plt
 
 year = "2018_"
 name  = "1-3_to_4_4more_"    
-name  = "2-4_to_5_4more_"    
-name = '3-5_to_6_4more_'
-name = '4-6_to_7_4more_' 
-name = '5-7_to_8_4more_'
-name = '6-8_to_9_4more_'
-name = '7-9_to_10_4more_'
-name = '8-10_to_11_4more_'
+# name  = "2-4_to_5_4more_"    
+# name = '3-5_to_6_4more_'
+# name = '4-6_to_7_4more_' 
+# name = '5-7_to_8_4more_'
+# name = '6-8_to_9_4more_'
+# name = '7-9_to_10_4more_'
+# name = '8-10_to_11_4more_'
 # name = '9-11_to_12_4more_'
 
 
@@ -86,12 +86,8 @@ for each in random_state:
 ave_acc = total_acc/count
 print('Average Accuracy: ',ave_acc)
 
-
-# with open(path2+name+"logisticRegression_result.csv", 'a', newline='') as file1:
-#     writer1 = csv.writer(file1)
-#     writer1.writerow('accuracy: ' + str(ave_acc))
     
-with open(path2+year+name+"logisticRegression_result_gg.csv", 'a', newline='') as file1:
+with open(path2+year+name+"logisticRegression_result.csv", 'a', newline='') as file1:
     writer1 = csv.writer(file1)
     writer1.writerow('accuracy: ' + str(ave_acc))
     writer1.writerow('#train: ' + str(len(X_train)))
