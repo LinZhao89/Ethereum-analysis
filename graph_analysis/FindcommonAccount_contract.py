@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Mar 15 23:53:49 2020
-
-@author: Lettuce
+find contractNet common account in adjacent years. 
 """
 import csv
 import sys
@@ -19,9 +17,7 @@ while True:
         maxInt = int(maxInt/10)
 import pandas as pd
 import numpy as np 
-#path1 = "C:/Users/superLin/Documents/blockchain/"
-#path1 ="E:/blockchain data at sch/New folder/blockchain/submission/original/transaction/"
-path1="/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/"
+path1="D:/"
 path2015= path1+"2015/contract_net_address_hash_2015_full.csv"
 path2016= path1+"2016/contract_net_address_hash_2016_full.csv"
 path2017= path1+"2017/contract_net_address_hash_2017_full.csv"
@@ -112,14 +108,3 @@ print("79: ", datetime.datetime.now())
 
 
 
-
-
-
-#print(common)
-#a_set = set(account2018) 
-#b_set = set(account2019) 
-#common = a_set.intersection(b_set)
-
-#df = pandas.DataFrame(data={"common": list(common)})
-#df.to_csv("./2018-2019-Transaction-accountSummary.csv", sep=',',index=False)
-#print("4: ", datetime.datetime.now())

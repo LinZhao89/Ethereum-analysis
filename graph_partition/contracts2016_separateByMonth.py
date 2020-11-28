@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 17 00:22:01 2020
-
-"""
 
 #*****************************************************************************************#
 #```from original source file to hashed versions                                          #
@@ -43,8 +38,8 @@ nodes = {}
 contracts = {}
 n = 0
 count= 0
-path1 ="E:/blockchain data at sch/New folder/blockchain/submission/original/trace/"
-path2 ="E:/blockchain data at sch/New folder/blockchain/submission/original/contract/"
+path1 ="D/trace/"
+path2 ="D/contract/"
 year = "byMonth/2017_"
 jan1 = path2+year+"jan.csv"
 feb1 = path2+year+"feb.csv"
@@ -76,17 +71,10 @@ with open(path2+"contracts2017.csv", "r") as cFile:
         for rows in reader:
             if rows[0] != 'address':
                 contracts.update({rows[0]: "sc"})
-#while a < 5000 :
-#    if a < 10:
-#        f = 'traces'+filenum1+str(a)+'.csv'
-#    elif a <100:
-#        f = 'traces'+filenum2+str(a)+'.csv'
-#    elif a < 1000:
-#        f = 'traces'+filenum3+str(a)+'.csv'
-#    else:
-#        f = 'traces'+filenum4+str(a)+'.csv'
+
+
         
-    #['transaction_hash', 'transaction_index', 'from_address', 'to_address', 'value', 'input', 'output', 'contract_type', 'call_type', 'reward_type', 'gas', 'gas_used', 'subcontracts', 'contract_address', 'error', 'status', 'block_timestamp', 'block_number', 'block_hash']
+#['transaction_hash', 'transaction_index', 'from_address', 'to_address', 'value', 'input', 'output', 'contract_type', 'call_type', 'reward_type', 'gas', 'gas_used', 'subcontracts', 'contract_address', 'error', 'status', 'block_timestamp', 'block_number', 'block_hash']
 f = path1+"trace_2017.csv"
 jan=[]
 feb=[]

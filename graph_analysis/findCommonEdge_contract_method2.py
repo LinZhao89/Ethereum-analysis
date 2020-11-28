@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul  3 15:44:39 2020
-
-@author: zhao lin
-"""
-
-# -*- coding: utf-8 -*-
-"""
 Created on Fri May 29 00:58:42 2020
 to count how many edges are same, delete by years 
 

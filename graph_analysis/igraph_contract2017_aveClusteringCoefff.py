@@ -15,8 +15,7 @@ while True:
         break
     except OverflowError:
         maxInt = int(maxInt/10)
-path2 ="D:/blockchain data at sch/New folder/blockchain/submission/original/contract/"
-path2 = "/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/byMonth/2017/1mon/"
+path2 = "D:/"
 year = "byMonth/2017/2017_"
 year = "2017_"
 jan1 = path2+year+"jan.csvtest.txt"

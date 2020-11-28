@@ -21,20 +21,14 @@ while True:
         break
     except OverflowError:
         maxInt = int(maxInt/10)
-#path1 ="E:/blockchain data at sch/New folder/blockchain/submission/original/contract/2015/"
-path1="/home/LBS_ZHAOLIN/graph_analysis/block_chain/transaction/2016/"
-print(path1)
-#path1 = 'C:/Users/linzhao2/Downloads/blockchain_data/'
-#path1 = 'C:/Users/superLin/Documents/blockchain/'
+path1="D:/"
 filename = "transaction_net_2016test.txt" 
 nod = path1+"transaction_net_address_hash_2016.csv"
 
 pathlengthWCC = path1+filename+'_IGRAPH_WCC_lenth_radius_diameter_sample_remove0.csv'
 pathlengthSCC = path1+filename+'_IGRAPH_SCC_lenth_radius_diameter_sample_remove0.csv'
-#chain4_number = path1+filename+'_IGRAPH_SCCmaincore_4nodeChainNum.csv'
 
 node_list = pd.read_csv(nod, header = None)
-###multi_edge_list = pd.read_csv(multi, header = None)
 multiGraph = Graph.Read_Edgelist(path1 + filename, directed=True) # produce multiDigraph 
 simpleGraph = multiGraph.simplify(multiple=True, loops=True, combine_edges=None)
 vs = VertexSeq(simpleGraph)

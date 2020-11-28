@@ -2,8 +2,6 @@
 """
 Created on Fri Oct 16 15:40:10 2020
 
-@author: linzhao2
-
 method 1: using bi-directed edge - undirected edge 
 """
 
@@ -23,9 +21,8 @@ while True:
         break
     except OverflowError:
         maxInt = int(maxInt/10)
-#path1 ="E:/blockchain data at sch/New folder/blockchain/submission/original/trace/2015/"
-path1 = "/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/byMonth/month/"
-path1="D:/blockchain data at sch/New folder/blockchain/submission/original/contract/byMonth/2016/"
+
+path1="D:/"
 
 filename ="2016_dec.csvtest.txt"
 print(filename)

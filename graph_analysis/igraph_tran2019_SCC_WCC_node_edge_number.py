@@ -15,20 +15,12 @@ while True:
         break
     except OverflowError:
         maxInt = int(maxInt/10)
-#path1 ="E:/blockchain data at sch/New folder/blockchain/submission/original/contract/2015/"
-path1="/home/LBS_ZHAOLIN/graph_analysis/block_chain/trace/2019/"
-#path1 = 'C:/Users/linzhao2/Downloads/blockchain_data/'
+path1="D:/"
+
 filename = "trace_net_2019test.txt"
 print(filename)
-# filename1 = "transaction_net_2019test.txt"
-#multi =path1 + filename+ ".csv" 
-#undir = path1+path2+'transaction_net_2019.csvremoveDuplicate.csv'
-#nod = path1+"contract_net_address_hash2015.csv"
 numCC_output= path1 + filename + "_WCC_SCC_node_edge_num.csv"
-#core_number = path1+filename+'core_number_byweaklyNode.csv'
-#in_out_degree_output = path1+filename+'_in_out_degree.csv'
-# centrality= path1+filename1+'Vcentrality.csv'
-#core_number = path1+filename+'core_number_byNode.csv'
+
 
 #multi_edge_list = pd.read_csv(multi, header = None)
 multiGraph = Graph.Read_Edgelist(path1 + filename, directed=True) # produce multiDigraph 
