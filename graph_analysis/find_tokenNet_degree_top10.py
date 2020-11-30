@@ -6,7 +6,6 @@ read degree value , find top 10 with its account name and multiDigraph degree va
 """
 import igraph
 from igraph import *
-
 import pandas as pd
 import csv
 import sys
@@ -20,12 +19,12 @@ while True:
         break
     except OverflowError:
         maxInt = int(maxInt/10)
-path1 ="E:/blockchain data at sch/New folder/blockchain/submission/original/token_trf/"
+path1 ="D:/"
 
 
 degree_top10 = path1+'degree_top10.csv'
 
-
+# load the pre-calculate degree value for each node, sort and write to files. 
 degree_number = path1+'2015/token_net_2015_degreeDistribution.csv'
 degree_list = pd.read_csv(degree_number)
 data_sort = degree_list.sort_values("multiDigraph",ascending=False,ignore_index=True)
