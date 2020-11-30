@@ -1,7 +1,5 @@
-
 import igraph
 from igraph import *
-
 import pandas as pd
 import csv
 import sys
@@ -15,6 +13,7 @@ while True:
         break
     except OverflowError:
         maxInt = int(maxInt/10)
+        
 path1 = 'D:'
 filename ="contract_net_2017_fulltest.txt"
 print(filename)
@@ -53,7 +52,7 @@ wcc_num_edge = maxWeakConnectedComponent.ecount()
 print(f' wcc edge: {wcc_num_edge}')
 
 
-##-------------calcualte core from largest weakly cppnnected component----grapy:maxWeakConnectedComponent----------
+##-------------calcualte core from largest weakly cppnnected component--------------
 maxWeakConnectedComponent.to_undirected()   
 core_decom=maxWeakConnectedComponent.shell_index(mode=ALL)
 # the argument is value within range of core_decom

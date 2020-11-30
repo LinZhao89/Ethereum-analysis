@@ -25,21 +25,23 @@ while True:
     except OverflowError:
         maxInt = int(maxInt/10)
 import numpy as np 
-#path1 = "C:/Users/superLin/Documents/blockchain/"
-#path1 ="E:/blockchain data at sch/New folder/blockchain/submission/original/contract/"
-path1="/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/"
 
+path1="D:/"
+
+# common account between years
 path56= path1+"commonAccountSummary_new/2015-2016-contract-accountSummary.csv"
 path67= path1+"commonAccountSummary_new/2016-2017-contract-accountSummary.csv"
 path78= path1+"commonAccountSummary_new/2017-2018-contract-accountSummary.csv"
 path89= path1+"commonAccountSummary_new/2018-2019-contract-accountSummary.csv"
 
+# contractNet edge list in each year
 path2015= path1+"2015/contract_net_2015_full.csv"
 path2016= path1+"2016/contract_net_2016_full.csv"
 path2017= path1+"2017/contract_net_2017_full.csv"
 path2018= path1+"2018/contract_net_2018_full.csv"
 path2019= path1+"2019/contract_net_2019_full.csv"
 
+# contractNet hash table 
 hash2015= path1+"2015/contract_net_address_hash_2015_full.csv"
 hash2016= path1+"2016/contract_net_address_hash_2016_full.csv"
 hash2017= path1+"2017/contract_net_address_hash_2017_full.csv"

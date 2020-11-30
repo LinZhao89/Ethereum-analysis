@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-find contractNet common account in adjacent years. 
+find contractNet common account on yearly basis 
 """
 import csv
 import sys
@@ -17,6 +16,7 @@ while True:
         maxInt = int(maxInt/10)
 import pandas as pd
 import numpy as np 
+
 path1="D:/"
 path2015= path1+"2015/contract_net_address_hash_2015_full.csv"
 path2016= path1+"2016/contract_net_address_hash_2016_full.csv"
