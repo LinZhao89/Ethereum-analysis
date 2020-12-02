@@ -67,15 +67,21 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 
 <!-- Network Extraction -->
 ## Network Extraction 
-* [Edgelist and Account Extraction](Network_extraction/)
+* [Link to the scripts](Network_extraction/)
+
 
 <!-- Graph Analysis -->
 ## Graph Analysis 
+* [Link to the scripts](Graph_analysis/)
 
 <!-- Community Detection and Predition -->
-## Community Detection
+## Community Detection and Predition 
 
-## Community Predition
+1. Community Detection
+* [Link to the scripts](community_detection_prediction/community_detection/)
+
+2. Community Predition
+* [Link to the scripts](community_detection_prediction/community_prediction/)
 
 
 
