@@ -8,6 +8,10 @@
   * [Kaggle](#Kaggle)
   * [Github](#github)
 * [Table Explanation](#Table-Explanation)  
+
+* [Network Extraction](#Network-Extraction)  
+* [Graph Analysis](#Graph-Analysis)  
+* [Community Detection and Prediction](#Community-Detection-and-Prediction)  
 * [Useful linkes](#Useful-linkes)
 * [Reference](#Reference)
 
@@ -60,10 +64,10 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 
 * The token transfers table focuses on all transactions with tokens from one 20-byte address to another 20-byte address on the blockchain.
 
-<!-- Network Extraction -->
-<<<<<<< HEAD
-## Network Extraction 
 
+<!-- Network Extraction -->
+## Network Extraction 
+* [Edgelist and Account Extraction](Network_extraction/)
 
 <!-- Graph Analysis -->
 ## Graph Analysis 
@@ -74,7 +78,6 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 ## Community Predition
 
 
->>>>>>> 3d010d0cf9daa016328300da83de56d0653ee7dc
 
 <!-- Useful linkes -->
 ## Useful linkes
