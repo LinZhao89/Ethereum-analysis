@@ -60,6 +60,18 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 
 * The token transfers table focuses on all transactions with tokens from one 20-byte address to another 20-byte address on the blockchain.
 
+<!-- Network Extraction -->
+## Network Extraction 
+
+
+<!-- Graph Analysis -->
+## Graph Analysis 
+
+<!-- Community Detection and Predition -->
+## Community Detection
+
+## Community Predition
+
 
 <!-- Useful linkes -->
 ## Useful linkes
