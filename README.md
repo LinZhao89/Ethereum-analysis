@@ -69,9 +69,11 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 ## Network Extraction 
 * [Link to the scripts](Network_extraction/)
 
+
 <!-- Graph Analysis -->
 ## Graph Analysis 
 * [Link to the scripts](Graph_analysis/)
+
 
 <!-- Community Detection and Predition -->
 ## Community Detection and Predition 
