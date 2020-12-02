@@ -71,11 +71,11 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 
 The folder contains four folders for transactionNet, traceNet,tokenNet and contractNet edgelist and accounts extraction. 
 
-For [transactionNet](Network_extraction/TransactionNet), [traceNet](Network_extraction/TraceNet),[tokenNet](Network_extraction/TokenNet)
-* Annual graph 
+*For [transactionNet](Network_extraction/TransactionNet), [traceNet](Network_extraction/TraceNet),[tokenNet](Network_extraction/TokenNet)
+	+ Annual graph 
 
-The raw data obtained from Google Bigquery is in annual basis.
-Scripts named as "tracexx.py","tokenxx.py" and "transactionxx.py" are to process annual-based raw data, form the annual based edge list and corresponding hash table. 
+	+ The raw data obtained from Google Bigquery is in annual basis.
+	+ Scripts named as "tracexx.py","tokenxx.py" and "transactionxx.py" are to process annual-based raw data, form the annual based edge list and corresponding hash table. 
 
 * Result
 
