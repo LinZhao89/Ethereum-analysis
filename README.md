@@ -7,11 +7,8 @@
   * [Google_bigquery](#Google-bigquery)
   * [Kaggle](#Kaggle)
   * [Github](#github)
-* [Table Explanation](#Table-Explanation)  
-
-* [Network Extraction](#Network-Extraction)  
-* [Graph Analysis](#Graph-Analysis)  
-* [Community Detection and Prediction](#Community-Detection-and-Prediction)  
+* [Tables Explanation](#Table-Explanation)  
+* [Scripts Explanation](#Script-Explanation) 
 * [Useful linkes](#Useful-linkes)
 * [Reference](#Reference)
 
@@ -53,7 +50,7 @@ Please refer to the github page for more details.
 
 
 
-<!-- Table Explanation -->
+<!-- Tables Explanation -->
 ## Table Explanation
 We extract all relevant data from dataset under the Google Cloud till 2019-12-31 23:59:45 UTC, which amounts to all blocks from genesis (#0) up to #9193265. The entire blockchain data is stored in seven different tables, out of which, we extract data from `contracts`, `token transfers`, `traces`, and `transactions` tables for our temporal analysis.
 
@@ -65,7 +62,7 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 * The token transfers table focuses on all transactions with tokens from one 20-byte address to another 20-byte address on the blockchain.
 
 
-<!-- Script Explanation -->
+<!-- Scripts Explanation -->
 
 All the scripts are written in python 3.7. To run the script, please lunch a python tools like Anaconda or directly run "python xx.py" 
 
@@ -114,16 +111,19 @@ For [contractNet](Network_extraction/ContractNet)
 
    There are 3 steps in community detection
 
-   Step1: Identify communities using Multi-level algorithm 
+   Step1: Identify communities using Multi-level algorithm
+   
 	[find_contract2019_community_multilevel_realEdgeIndex_3mon.py ](community_detection_prediction/community_detection/find_contract2019_community_multilevel_realEdgeIndex_3mon.py )
 	
 	Note: python igraph library output communities edgelist using index instead of real value of nodes. In order to perform matching in next step, it is needed to attach values (which is annual basis index) to each nodes. 
 
     Step2: Match communities in 3-month dataset and 1-month dataset
+    
 	[Find_continuous_community1_grow_die_compareREALindex.py](community_detection_prediction/community_detection/Find_continuous_community1_grow_die_compareREALindex.py)
 	This script makes use of vf2 algorithm for subiomorphism matching. The matching not only consider graph shape but also node values to be matched. 
 
     Step3: Extract properties for each community
+    
 	[extract_contract2016_properties.py](community_detection_prediction/community_detection/extract_contract2016_properties.py)
 	The script extract local and global properties of each community to be training/testing data. 
 
