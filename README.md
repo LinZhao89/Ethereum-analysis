@@ -65,7 +65,10 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 * The token transfers table focuses on all transactions with tokens from one 20-byte address to another 20-byte address on the blockchain.
 
 
-<!-- Network Extraction -->
+<!-- Script Explanation -->
+
+All the scripts are written in python 3.7. To run the script, please lunch a python tools like Anaconda or directly run "python xx.py" 
+
 ## Network Extraction 
 [Link to the folder](Network_extraction/)
 
@@ -97,12 +100,12 @@ For [contractNet](Network_extraction/ContractNet)
    Due to the file size limitation in github, only ContractNet Year2015 annual edgelist and hash table is uploaded as a reference in folder "contractNet_address_hash" and "contractNet_edgelist_example".
 
 
-<!-- Graph Analysis -->
+
 ## Graph Analysis 
 [Link to the folder](Graph_analysis/)
 
 
-<!-- Community Detection and Predition -->
+
 ## Community Detection and Predition 
 
 1. Community Detection
