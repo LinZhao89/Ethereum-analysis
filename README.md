@@ -8,7 +8,10 @@
   * [Kaggle](#Kaggle)
   * [Github](#github)
 * [Tables Explanation](#Table-Explanation)  
-* [Scripts Explanation](#Script-Explanation) 
+* [Scripts Explanation](#Script-Explanation)
+  * [Network Extraction](#Network-Extraction)
+  * [Graph Analysis](#Graph-Analysis)
+  * [Community Detection and Prediction](#Community-Detection-and-Prediction)	
 * [Useful linkes](#Useful-linkes)
 * [Reference](#Reference)
 
@@ -65,8 +68,9 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 <!-- Scripts Explanation -->
 
 All the scripts are written in python 3.7. To run the script, please lunch a python tools like Anaconda or directly run "python xx.py" 
+## Scripts Explanation
 
-## Network Extraction 
+### Network Extraction 
 [Link to the folder](Network_extraction/)
 
 The folder contains four folders for transactionNet, traceNet,tokenNet and contractNet edgelist and accounts extraction. 
@@ -98,12 +102,12 @@ For [contractNet](Network_extraction/ContractNet)
 
 
 
-## Graph Analysis 
+### Graph Analysis 
 [Link to the folder](Graph_analysis/)
 
 
 
-## Community Detection and Predition 
+### Community Detection and Predition 
 
 1. Community Detection
 
