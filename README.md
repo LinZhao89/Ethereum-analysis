@@ -113,6 +113,7 @@ For [contractNet](Network_extraction/ContractNet)
 
    Step1: Identify communities using Multi-level algorithm 
 	[find_contract2019_community_multilevel_realEdgeIndex_3mon.py ](community_detection_prediction/community_detection/find_contract2019_community_multilevel_realEdgeIndex_3mon.py )
+	
 	Note: python igraph library output communities edgelist using index instead of real value of nodes. In order to perform matching in next step, it is needed to attach values (which is annual basis index) to each nodes. 
 
     Step2: Match communities in 3-month dataset and 1-month dataset
@@ -124,6 +125,7 @@ For [contractNet](Network_extraction/ContractNet)
 	The script extract local and global properties of each community to be training/testing data. 
 
 2. Community Predition
+
    [Link to the folder](community_detection_prediction/community_prediction/)
 
    Individual 
