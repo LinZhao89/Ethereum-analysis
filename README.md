@@ -66,9 +66,10 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 
 
 <!-- Scripts Explanation -->
+## Scripts Explanation
 
 All the scripts are written in python 3.7. To run the script, please lunch a python tools like Anaconda or directly run "python xx.py" 
-## Scripts Explanation
+
 
 ### Network Extraction 
 [Link to the folder](Network_extraction/)
