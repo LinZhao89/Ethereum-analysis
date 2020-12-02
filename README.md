@@ -93,38 +93,41 @@ Due to the file size limitation in github, only ContractNet Year2015 annual edge
 
 <!-- Graph Analysis -->
 ## Graph Analysis 
-* [Link to the folder](Graph_analysis/)
+[Link to the folder](Graph_analysis/)
 
 
 <!-- Community Detection and Predition -->
 ## Community Detection and Predition 
 
 1. Community Detection
-* [Link to the folder](community_detection_prediction/community_detection/)
+[Link to the folder](community_detection_prediction/community_detection/)
+
 There are 3 steps in community detection
 
-Step1: Identify communities using Multi-level algorithm 
+* Step1: Identify communities using Multi-level algorithm 
 [find_contract2019_community_multilevel_realEdgeIndex_3mon.py ](community_detection_prediction/community_detection/find_contract2019_community_multilevel_realEdgeIndex_3mon.py )
 Note: python igraph library output communities edgelist using index instead of real value of nodes. In order to perform matching in next step, it is needed to attach values (which is annual basis index) to each nodes. 
 
-Step2: Match communities in 3-month dataset and 1-month dataset
+* Step2: Match communities in 3-month dataset and 1-month dataset
 [Find_continuous_community1_grow_die_compareREALindex.py](community_detection_prediction/community_detection/Find_continuous_community1_grow_die_compareREALindex.py)
 This script makes use of vf2 algorithm for subiomorphism matching. The matching not only consider graph shape but also node values to be matched. 
 
-Step3: Extract properties for each community
+* Step3: Extract properties for each community
 [extract_contract2016_properties.py](community_detection_prediction/community_detection/extract_contract2016_properties.py)
 The script extract local and global properties of each community to be training/testing data. 
 
 2. Community Predition
-* [Link to the folder](community_detection_prediction/community_prediction/)
+[Link to the folder](community_detection_prediction/community_prediction/)
 
-* Individual 
+*Individual 
+
 Scripts [logistic_regression.py](community_detection_prediction/community_prediction/logistic_regression.py)
 and [random_forest.py ](community_detection_prediction/community_prediction/random_forest.py )are used for each time period prediction. 
 The script are generalized, it only requires to input the class 1 and class 0 training features and labels. 
 There is a random selection function in the script to balance class 1 and class 0. It needs to adjust based input data. 
 
 * Overall
+
 Scripts [logistic_regression_combine_allMonth.py](community_detection_prediction/community_prediction/logistic_regression_combine_allMonth.py)
 and [random_forest_combine_allMonth.py](community_detection_prediction/community_prediction/random_forest_combine_allMonth.py )are for competed year prediction. 
 So the training data are combined pior to input into the scripts. Therefore, the scipts are almost the same as individual scripts. 
@@ -138,9 +141,9 @@ So the training data are combined pior to input into the scripts. Therefore, the
 
 <!-- Useful linkes -->
 ## Useful linkes
-* [Github ethereum](https://github.com/blockchain-etl/ethereum-etl)
-* [Google bigquery](https://cloud.google.com/bigquery)
-* [Kaggle](https://www.kaggle.com/bigquery/ethereum-blockchain)
+1. [Github ethereum](https://github.com/blockchain-etl/ethereum-etl)
+2. [Google bigquery](https://cloud.google.com/bigquery)
+3. [Kaggle](https://www.kaggle.com/bigquery/ethereum-blockchain)
 
 <!-- Reference -->
 ## Reference
