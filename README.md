@@ -125,11 +125,13 @@ For [contractNet](Network_extraction/ContractNet)
     Step2: Match communities in 3-month dataset and 1-month dataset
     
 	[Find_continuous_community1_grow_die_compareREALindex.py](community_detection_prediction/community_detection/Find_continuous_community1_grow_die_compareREALindex.py)
+	
 	This script makes use of vf2 algorithm for subiomorphism matching. The matching not only consider graph shape but also node values to be matched. 
 
     Step3: Extract properties for each community
     
 	[extract_contract2016_properties.py](community_detection_prediction/community_detection/extract_contract2016_properties.py)
+	
 	The script extract local and global properties of each community to be training/testing data. 
 
 2. Community Predition
