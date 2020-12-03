@@ -7,11 +7,11 @@
   * [Google_bigquery](#Google-bigquery)
   * [Kaggle](#Kaggle)
   * [Github](#github)
-* [Table Explanation](#Table-Explanation)  
-
-* [Network Extraction](#Network-Extraction)  
-* [Graph Analysis](#Graph-Analysis)  
-* [Community Detection and Prediction](#Community-Detection-and-Prediction)  
+* [Tables Explanation](#Table-Explanation)  
+* [Scripts Explanation](#Script-Explanation)
+  * [Network Extraction](#Network-Extraction)
+  * [Graph Analysis](#Graph-Analysis)
+  * [Community Detection and Prediction](#Community-Detection-and-Prediction)	
 * [Useful linkes](#Useful-linkes)
 * [Reference](#Reference)
 
@@ -53,7 +53,7 @@ Please refer to the github page for more details.
 
 
 
-<!-- Table Explanation -->
+<!-- Tables Explanation -->
 ## Table Explanation
 We extract all relevant data from dataset under the Google Cloud till 2019-12-31 23:59:45 UTC, which amounts to all blocks from genesis (#0) up to #9193265. The entire blockchain data is stored in seven different tables, out of which, we extract data from `contracts`, `token transfers`, `traces`, and `transactions` tables for our temporal analysis.
 
@@ -65,79 +65,91 @@ We extract all relevant data from dataset under the Google Cloud till 2019-12-31
 * The token transfers table focuses on all transactions with tokens from one 20-byte address to another 20-byte address on the blockchain.
 
 
-<!-- Network Extraction -->
-## Network Extraction 
+<!-- Scripts Explanation -->
+## Scripts Explanation
+
+All the scripts are written in python 3.7. To run the script, please lunch a python tools like Anaconda or directly run "python xx.py" 
+
+
+### Network Extraction 
 [Link to the folder](Network_extraction/)
 
 The folder contains four folders for transactionNet, traceNet,tokenNet and contractNet edgelist and accounts extraction. 
 
-*For [transactionNet](Network_extraction/TransactionNet), [traceNet](Network_extraction/TraceNet),[tokenNet](Network_extraction/TokenNet)
-	+ Annual graph 
+For [transactionNet](Network_extraction/TransactionNet), [traceNet](Network_extraction/TraceNet),[tokenNet](Network_extraction/TokenNet)
+ 1. Annual graph 
+ 
+    The raw data obtained from Google Bigquery is in annual basis.
+    Scripts named as "tracexx.py","tokenxx.py" and "transactionxx.py" are to process annual-based raw data, form the annual based edge list and corresponding hash table. 
 
-	+ The raw data obtained from Google Bigquery is in annual basis.
-	+ Scripts named as "tracexx.py","tokenxx.py" and "transactionxx.py" are to process annual-based raw data, form the annual based edge list and corresponding hash table. 
+ 2. Result
 
-* Result
-
-Due to the file size limitation in github, only Year2015 annual edgelist and hash table is uploaded as a reference 
+    Due to the file size limitation in github, only Year2015 annual edgelist and hash table is uploaded as a reference 
 
 
 For [contractNet](Network_extraction/ContractNet)
-* Annual graph 
+1. Annual graph 
 
-The raw data obtained from Google Bigquery is in annual basis.
-Scripts named as "xx_Annual_xx.py" is to process annual-based raw data, form the annual based edge list and corresponding hash table. 
+   The raw data obtained from Google Bigquery is in annual basis.
+   Scripts named as "xx_Annual_xx.py" is to process annual-based raw data, form the annual based edge list and corresponding hash table. 
 
-* Monthly graph 
+2. Monthly graph 
 
-Script named as "xx_Monthly_xx.py" will not only form the edgelist and hash table but also help to partition the edgelist into different month by matching with the timestamp in raw data.
+   Script named as "xx_Monthly_xx.py" will not only form the edgelist and hash table but also help to partition the edgelist into different month by matching with the timestamp in raw data.
 
-* Result
+3. Result
 
-Due to the file size limitation in github, only ContractNet Year2015 annual edgelist and hash table is uploaded as a reference in folder "contractNet_address_hash" and "contractNet_edgelist_example".
+   Due to the file size limitation in github, only ContractNet Year2015 annual edgelist and hash table is uploaded as a reference in folder "contractNet_address_hash" and "contractNet_edgelist_example".
 
 
-<!-- Graph Analysis -->
-## Graph Analysis 
+
+### Graph Analysis 
 [Link to the folder](Graph_analysis/)
 
 
-<!-- Community Detection and Predition -->
-## Community Detection and Predition 
+
+### Community Detection and Predition 
 
 1. Community Detection
 
-[Link to the folder](community_detection_prediction/community_detection/)
+   [Link to the folder](community_detection_prediction/community_detection/)
 
-	There are 3 steps in community detection
+   There are 3 steps in community detection
 
-	* Step1: Identify communities using Multi-level algorithm 
+   Step1: Identify communities using Multi-level algorithm
+   
 	[find_contract2019_community_multilevel_realEdgeIndex_3mon.py ](community_detection_prediction/community_detection/find_contract2019_community_multilevel_realEdgeIndex_3mon.py )
+	
 	Note: python igraph library output communities edgelist using index instead of real value of nodes. In order to perform matching in next step, it is needed to attach values (which is annual basis index) to each nodes. 
 
-	* Step2: Match communities in 3-month dataset and 1-month dataset
+    Step2: Match communities in 3-month dataset and 1-month dataset
+    
 	[Find_continuous_community1_grow_die_compareREALindex.py](community_detection_prediction/community_detection/Find_continuous_community1_grow_die_compareREALindex.py)
+	
 	This script makes use of vf2 algorithm for subiomorphism matching. The matching not only consider graph shape but also node values to be matched. 
 
-	* Step3: Extract properties for each community
+    Step3: Extract properties for each community
+    
 	[extract_contract2016_properties.py](community_detection_prediction/community_detection/extract_contract2016_properties.py)
+	
 	The script extract local and global properties of each community to be training/testing data. 
 
 2. Community Predition
-[Link to the folder](community_detection_prediction/community_prediction/)
 
-*Individual 
+   [Link to the folder](community_detection_prediction/community_prediction/)
 
-Scripts [logistic_regression.py](community_detection_prediction/community_prediction/logistic_regression.py)
-and [random_forest.py ](community_detection_prediction/community_prediction/random_forest.py )are used for each time period prediction. 
-The script are generalized, it only requires to input the class 1 and class 0 training features and labels. 
-There is a random selection function in the script to balance class 1 and class 0. It needs to adjust based input data. 
+   Individual 
 
-* Overall
+   Scripts [logistic_regression.py](community_detection_prediction/community_prediction/logistic_regression.py)
+   and [random_forest.py ](community_detection_prediction/community_prediction/random_forest.py )are used for each time period prediction. 
+   The script are generalized, it only requires to input the class 1 and class 0 training features and labels. 
+   There is a random selection function in the script to balance class 1 and class 0. It needs to adjust based input data. 
 
-Scripts [logistic_regression_combine_allMonth.py](community_detection_prediction/community_prediction/logistic_regression_combine_allMonth.py)
-and [random_forest_combine_allMonth.py](community_detection_prediction/community_prediction/random_forest_combine_allMonth.py )are for competed year prediction. 
-So the training data are combined pior to input into the scripts. Therefore, the scipts are almost the same as individual scripts. 
+   Overall
+
+   Scripts [logistic_regression_combine_allMonth.py](community_detection_prediction/community_prediction/logistic_regression_combine_allMonth.py)
+   and [random_forest_combine_allMonth.py](community_detection_prediction/community_prediction/random_forest_combine_allMonth.py )are for competed year prediction. 
+   So the training data are combined pior to input into the scripts. Therefore, the scipts are almost the same as individual scripts. 
 
 
 
