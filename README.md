@@ -106,7 +106,23 @@ For [contractNet](Network_extraction/ContractNet)
 ### Graph Analysis 
 [Link to the folder](Graph_analysis/)
 
+1. [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
 
+An example to analyze contractNet for Figure 2
+
+2. [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
+
+An example to analyze contractNet for Figure 3
+
+3. [Analyze graph network reciprocity, associtativity, connectedComponent, kcore properties](graph_analysis/igraph_reciprocity_associtativity_connectedComponent_kcore.py)
+
+   [Analyze network pathLength, radius, diameter](graph_analysis/igraph_pathLength_radius_diameter_select500000_rm0.py)
+
+   [Analyze network triangle, transitivity, aveClusteringCoeff](graph_analysis/igraph_triangle_transitivity_aveClusteringCoeff.py)
+
+   [Analyze network vertices and arcs](graph_analysis/networkx_Count_vertex_arc_of_network.py)
+
+   An example for extract network properties for section 4, 5 and 6
 
 ### Community Detection and Predition 
 
