@@ -8,7 +8,7 @@
   * [Kaggle](#Kaggle)
   * [Github](#github)
 * [Tables Explanation](#Table-Explanation)  
-* [Scripts Explanation](#Script-Explanation)
+* [Scripts Explanation](#Scripts-Explanation)
   * [Network Extraction](#Network-Extraction)
   * [Graph Analysis](#Graph-Analysis)
   * [Community Detection and Prediction](#Community-Detection-and-Prediction)	
@@ -106,36 +106,44 @@ For [contractNet](Network_extraction/ContractNet)
 ### Graph Analysis 
 [Link to the folder](Graph_analysis/)
 
-1. [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
+1. [Find number of vertices, arcs and self-loops of each network](graph_analysis/networkx_Count_vertex_arc_of_network.py
+	
+	An example to analyze contractNet_2019 number of vertices, arcs and self-loops for figure 2 and 3
+	
+   [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
 
    An example to analyze contractNet for Figure 2
 
-2. [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
+  [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
 
    An example to analyze contractNet for Figure 3
 
-3. [Analyze graph network reciprocity, associtativity, connectedComponent, kcore properties](graph_analysis/igraph_reciprocity_associtativity_connectedComponent_kcore.py)
+2. [Analyze graph network reciprocity, associtativity, connectedComponent, kcore properties](graph_analysis/igraph_reciprocity_associtativity_connectedComponent_kcore.py)
 
    [Analyze network pathLength, radius, diameter](graph_analysis/igraph_pathLength_radius_diameter_select500000_rm0.py)
 
    [Analyze network triangle, transitivity, aveClusteringCoeff](graph_analysis/igraph_triangle_transitivity_aveClusteringCoeff.py)
 
-   [Analyze network vertices and arcs](graph_analysis/networkx_Count_vertex_arc_of_network.py)
-
+   [Analyze network weakly connected component and strongly connected component](graph_analysis/igraph_SCC_WCC_node_edge_number.py)
+   
    An example for extract network properties for section 4, 5 and 6
    
-4. [Find tokenNet top10 degree accounts](graph_analysis/find_tokenNet_degree_top10.py)
+3. [Extract degree number for each vertex](graph_analysis/networkx_vertices_degree_distribution.py)
 
+   An example to calculate number of degree/indegree/outdegree for each vertex in the network. Input is the network edgelist, Output is a csv with the account and corresponding results.
+   
+   [Find tokenNet top10 degree accounts](graph_analysis/find_tokenNet_degree_top10.py)
 
-### Community Detection and Predition 
+	Read in vertices degree distribution file (in previous step) and list down the top 10 values for each year for table 6 and table 7. 
+	
+	
+### Community detection and prediction
 
-1. Community Detection
+1. Community detection
+	
+    There are 3 steps in community detection
 
-   [Link to the folder](community_detection_prediction/community_detection/)
-
-   There are 3 steps in community detection
-
-   Step1: Identify communities using Multi-level algorithm
+    Step1: Identify communities using Multi-level algorithm
    
 	[find_contract2019_community_multilevel_realEdgeIndex_3mon.py ](community_detection_prediction/community_detection/find_contract2019_community_multilevel_realEdgeIndex_3mon.py )
 	
