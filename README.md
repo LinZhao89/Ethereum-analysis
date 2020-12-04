@@ -25,7 +25,7 @@ In this project, we investigate the evolutionary nature of Ethereum interaction 
 
 <!-- Data Extraction -->
 ## Data Extraction 
-Due to the size limitation, instead of uploading the dataset, we will introduce the extraction method we are using to obtain the data. We also demonstrate a sample edge list and corresponding address hased table split by year and by month (only for Contract Net) in each folder.
+Due to the size limitation, instead of uploading the dataset, we will introduce the extraction method we are using to obtain the data. We also demonstrate a sample arc list and corresponding address hased table split by year and by month (only for Contract Net) in each folder.
 ### Google bigquery
 
 1. Apply and login to Google Cloud Platform account.
@@ -74,32 +74,32 @@ All the scripts are written in python 3.7. To run the script, please lunch a pyt
 ### Network Extraction 
 [Link to the folder](Network_extraction/)
 
-The folder contains four folders for transactionNet, traceNet,tokenNet and contractNet edgelist and accounts extraction. 
+The folder contains four folders for transactionNet, traceNet,tokenNet and contractNet arc list and accounts extraction. 
 
-For [transactionNet](Network_extraction/TransactionNet), [traceNet](Network_extraction/TraceNet),[tokenNet](Network_extraction/TokenNet)
+For [transactionNet](Network_extraction/TransactionNet), [traceNet](Network_extraction/TraceNet), [tokenNet](Network_extraction/TokenNet)
  1. Annual graph 
  
     The raw data obtained from Google Bigquery is in annual basis.
-    Scripts named as "tracexx.py","tokenxx.py" and "transactionxx.py" are to process annual-based raw data, form the annual based edge list and corresponding hash table. 
+    Scripts named as "tracexx.py","tokenxx.py" and "transactionxx.py" are to process annual-based raw data, form the annual based arc list and corresponding hash table. 
 
  2. Result
 
-    Due to the file size limitation in github, only Year2015 annual edgelist and hash table is uploaded as a reference 
+    Due to the file size limitation in github, only Year2015 annual arc list and hash table is uploaded as a reference 
 
 
 For [contractNet](Network_extraction/ContractNet)
 1. Annual graph 
 
    The raw data obtained from Google Bigquery is in annual basis.
-   Scripts named as "xx_Annual_xx.py" is to process annual-based raw data, form the annual based edge list and corresponding hash table. 
+   Scripts named as "xx_Annual_xx.py" is to process annual-based raw data, form the annual based arc list and corresponding hash table. 
 
 2. Monthly graph 
 
-   Script named as "xx_Monthly_xx.py" will not only form the edgelist and hash table but also help to partition the edgelist into different month by matching with the timestamp in raw data.
+   Script named as "xx_Monthly_xx.py" will not only form the arc list and hash table but also help to partition the arc list into different month by matching with the timestamp in raw data.
 
 3. Result
 
-   Due to the file size limitation in github, only ContractNet Year2015 annual edgelist and hash table is uploaded as a reference in folder "contractNet_address_hash" and "contractNet_edgelist_example".
+   Due to the file size limitation in github, only ContractNet Year2015 annual arc list and hash table is uploaded as a reference in folder "contractNet_address_hash" and "contractNet_edgelist_example".
 
 
 
@@ -108,11 +108,11 @@ For [contractNet](Network_extraction/ContractNet)
 
 1. [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
 
-An example to analyze contractNet for Figure 2
+   An example to analyze contractNet for Figure 2
 
 2. [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
 
-An example to analyze contractNet for Figure 3
+   An example to analyze contractNet for Figure 3
 
 3. [Analyze graph network reciprocity, associtativity, connectedComponent, kcore properties](graph_analysis/igraph_reciprocity_associtativity_connectedComponent_kcore.py)
 
@@ -123,6 +123,9 @@ An example to analyze contractNet for Figure 3
    [Analyze network vertices and arcs](graph_analysis/networkx_Count_vertex_arc_of_network.py)
 
    An example for extract network properties for section 4, 5 and 6
+   
+4. [Find tokenNet top10 degree accounts](graph_analysis/find_tokenNet_degree_top10.py)
+
 
 ### Community Detection and Predition 
 
@@ -136,7 +139,7 @@ An example to analyze contractNet for Figure 3
    
 	[find_contract2019_community_multilevel_realEdgeIndex_3mon.py ](community_detection_prediction/community_detection/find_contract2019_community_multilevel_realEdgeIndex_3mon.py )
 	
-	Note: python igraph library output communities edgelist using index instead of real value of nodes. In order to perform matching in next step, it is needed to attach values (which is annual basis index) to each nodes. 
+	Note: python igraph library output communities arc list using index instead of real value of nodes. In order to perform matching in next step, it is needed to attach values (which is annual basis index) to each nodes. 
 
     Step2: Match communities in 3-month dataset and 1-month dataset
     
