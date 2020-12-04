@@ -106,17 +106,17 @@ For [contractNet](Network_extraction/ContractNet)
 ### Graph Analysis 
 [Link to the folder](Graph_analysis/)
 
-1. [Find number of vertices, arcs and self-loops of each network](graph_analysis/networkx_Count_vertex_arc_of_network.py
+1. [Find number of vertices, arcs and self-loops of each network](graph_analysis/networkx_Count_vertex_arc_of_network.py)
 	
-	An example to analyze contractNet_2019 number of vertices, arcs and self-loops for figure 2 and 3
+	An example to analyze contractNet_2019 number of vertices, arcs and self-loops for figure 2 and 3.
 	
    [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
 
-   An example to analyze contractNet for Figure 2
+   An example to analyze contractNet for Figure 2.
 
-  [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
+   [Find common account in continuous years](graph_analysis/FindcommonAccount_contract.py)
 
-   An example to analyze contractNet for Figure 3
+   An example to analyze contractNet for Figure 3.
 
 2. [Analyze graph network reciprocity, associtativity, connectedComponent, kcore properties](graph_analysis/igraph_reciprocity_associtativity_connectedComponent_kcore.py)
 
