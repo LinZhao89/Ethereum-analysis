@@ -60,7 +60,6 @@ for entry2 in entries2:
     
     if entry2.endswith('.txt'):
         print(f' {entry2}')
-        print('-----------')
         g2 = Graph.Read_Edgelist(directoryPath2+entry2, directed=False) # produce multiDigraph 
         node_list2 = pd.read_csv(nod2+entry2.split(".")[0]+ ".csvhased.csv", header = None)
         for i in g2.vs:
@@ -71,7 +70,6 @@ for entry2 in entries2:
         ent2.append(g2) 
         catchName2.append(entry2)
 
-print("------finish take in---------")
         
 g1g2=[] 
 
@@ -113,7 +111,6 @@ for i in catchName1:
                 count2=0
                 for g2 in ent2:
                     result3 = g2.subisomorphic_vf2(g3,node_compat_fn=cmp_nodes1 )
-                    #result3 = g2.subisomorphic_vf2(g3)
                     print(result3)
                     if result3 ==True:
                         print(g3)
