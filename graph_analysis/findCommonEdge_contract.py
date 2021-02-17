@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri May 29 00:58:42 2020
-to count how many edges are same, delete by years 
 
 !!!!!!for contract net only!!!!!!!!
 
@@ -292,7 +291,7 @@ print("69: ", datetime.datetime.now())
 df8 = pd.merge(df2, df3, how='inner', left_on='combine', right_on='combine')
 df8.to_csv(path1+"2016-2018-contract-simpleDirected_commonEdge.csv", sep=',',index=False)
 print("68: ", datetime.datetime.now())
-
+ 
 
 
 
