@@ -103,7 +103,7 @@ print("69: ", datetime.datetime.now())
 '''------------------------------------------------------------------------'''
 df12 = pd.merge(df5, df6, how='inner', left_on='account', right_on='account')
 df12.to_csv(path1+"2017-2019-contract-accountSummary.csv", sep=',',index=False)
-print("79: ", datetime.datetime.now())
+print("79: ", datetime.datetime.now()) 
 
 
 
