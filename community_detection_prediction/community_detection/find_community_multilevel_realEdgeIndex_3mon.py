@@ -64,7 +64,6 @@ mainV = largest_cluster.vcount()
 print(f' giant V: {mainV}, giantE = {mainE}')
 
 all_subgraaph=walk_cluster.subgraphs()
-print("2: ", datetime.datetime.now())
 
 count=0
 for idx in range(len(all_subgraaph)):
