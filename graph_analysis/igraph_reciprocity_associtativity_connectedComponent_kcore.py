@@ -72,8 +72,6 @@ smain_coreV=kcore.vcount()
 smain_coreE = kcore.ecount()
 xx=pd.DataFrame(core_decom)
 xx.to_csv(score_number, index=False)
-
-    
           
 with open(numCC_output, 'w', newline='') as file2:
       writer2 = csv.writer(file2)
