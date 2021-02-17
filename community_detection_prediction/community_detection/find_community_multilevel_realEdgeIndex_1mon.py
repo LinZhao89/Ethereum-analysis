@@ -39,7 +39,6 @@ octo1 = path2+year+"oct.csvtest.txt"
 nov1 = path2+year+"nov.csvtest.txt"
 dec1 = path2+year+"dec.csvtest.txt"
 
-
 month = "9"
 janfeb=path2+year+"jun.csvtest.txt"
 
