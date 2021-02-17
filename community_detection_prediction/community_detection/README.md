@@ -1,4 +1,4 @@
-# Community Detection Script
+# Community Detection Script 
 
 There are 3 steps in community detection
 
