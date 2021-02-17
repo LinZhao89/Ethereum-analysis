@@ -36,8 +36,6 @@ random_state = [i for i in range(0,20)]
 count = 0
 total_acc=0
 for each in random_state:
-    print(f' --------current state: {each}--------\n')
-
     X_train,X_test,y_train,y_test = train_test_split(total_data.iloc[:,0:13],total_data['label'],test_size=0.2,random_state=each,stratify=total_data['label'])
     scaler = MinMaxScaler()
     scaler.fit(X_train)
@@ -65,7 +63,6 @@ for each in random_state:
     total_acc+=score
     count+=1
     plt.show()
-    
     
 ave_acc = total_acc/count
 print('Average Accuracy: ',ave_acc)
