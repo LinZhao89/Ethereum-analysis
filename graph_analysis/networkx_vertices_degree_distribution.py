@@ -40,7 +40,7 @@ for i, elrow in multi_edge_list.iterrows():
     if (i % 10000 == 0):
         print(f' alive i is {i}')
         
-   
+ 
 ####-----------calculate degree/indegree/outdegree/------------------#######
 with open(degreeDistribution_output, 'w', newline='') as file, open(in_out_degree_output, 'w', newline='') as file1:
     writer = csv.writer(file)
