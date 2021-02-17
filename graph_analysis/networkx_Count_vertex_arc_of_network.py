@@ -22,10 +22,10 @@ while True:
 path1="D:/"
 
 # specify edgelist name 
-filename = "contract_net_2019"
+filename = "contract_net_2015"
 multi =path1 + filename+ ".csv" 
 # specify account hash table
-nod = path1+"contract_net_address_hash_2019.csv"
+nod = path1+"contract_net_address_hash_2015.csv"
 
 # specify output file name 
 node_arc_output= path1 + filename + "_node_arc_selfloop.csv"
@@ -52,7 +52,7 @@ print("finsh graph: ", datetime.datetime.now())
 
 ####-----------calculate degree/indegree/outdegree/------------------#######
 
-print('-contract2019 net ---')
+print('-contract2015 net ---')
 print('# of edges multi: {}'.format(multidiG.number_of_edges()))
 print(' # of self loop multi: {}'.format(nx.number_of_selfloops(multidiG)))
 
