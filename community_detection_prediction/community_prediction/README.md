@@ -1,4 +1,4 @@
-# Community Prediction Script 
+# Community Prediction Script
 
 ## Individual 
 Scripts logistic_regression.py and random_forest.py are used for each time period prediction. 
