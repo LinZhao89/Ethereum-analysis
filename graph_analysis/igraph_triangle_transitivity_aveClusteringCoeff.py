@@ -42,11 +42,6 @@ for idx in range(len(WCCtran_localCoe)):
     numtriangle = round(0.5* WCCtran_localCoe[idx] * WCC_subgraph_degree[idx] *( WCC_subgraph_degree[idx]-1))
     num_triangle.append(numtriangle)
     
-    
-#WCCtran_nodedf = WCCtran_nodedf.fillna(0)
-#WCCave_tran_node = sum(WCCtran_nodedf[0])/len(WCCtran_nodedf[0])
-#print(f'--WCCave_tran_node_nonan: {WCCave_tran_node}')
-    
 with open(WCCtriangle_counting, 'w') as f:
     writer = csv.writer(f)
     writer.writerow(['node_degree', 'node_triangle'])
@@ -71,4 +66,3 @@ with open(SCC_WCC_summary, 'w') as f1:
     writer2.writerow(["WCCave_tran_node","WCCglobal_transivity","SCCsum_triangle"]) 
     writer2.writerow([WCCave_tran_node,WCCglobal_transivity,WCCsum_triangle])
 
-print("start: ", datetime.datetime.now())
