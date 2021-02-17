@@ -44,8 +44,7 @@ for each in random_state:
     print(scaler.data_max_)
     X_train1 = scaler.transform(X_train)
     X_test1 = scaler.transform(X_test)
-    
-    # print(X_data.isnull().any())
+
     w = {0:1, 1:1} #{class_label: weight, class_label: weight}
     logistic_regression= LogisticRegression(class_weight='balanced')
     logistic_regression.fit(X_train1,y_train)
@@ -71,7 +70,6 @@ for each in random_state:
     df2=pd.DataFrame(sorted_important_features)
     df2.columns=['properties','importance']
     df2.to_csv(path2+year+name+"logisticRegression_result.csv", mode = 'a',index=False,header=True)
-#    xxx= sorted(feature_import_dict.values())
     
     y_pred=logistic_regression.predict(X_test1)
     confusion_matrix = pd.crosstab(y_test, y_pred, rownames=['Actual'], colnames=['Predicted'])
