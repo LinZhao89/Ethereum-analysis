@@ -22,7 +22,7 @@ while True:
 name = "2018_8-10_to_11_4more_"
 name1="2018_8910_4more/index/"
 
-path2 ="/home/LBS_ZHAOLIN/graph_analysis/block_chain/contract/"
+path2 ="/graph_analysis/block_chain/contract/"
 year= "byMonth/3month_data/multilabel/"
 filelist = pd.read_csv(path2+year+name+"matchGraph_name_growth_compareRealIdx_g1g2.csv", header=None)
 filelist.columns=['150days', 'dec']
