@@ -57,7 +57,6 @@ for each in random_state:
     X_train1 = scaler.transform(X_train)
     X_test1 = scaler.transform(X_test)
     
-    # print(X_data.isnull().any())
     w = {0:1, 1:1} #{class_label: weight, class_label: weight}
     logistic_regression= LogisticRegression(class_weight='balanced')
     logistic_regression.fit(X_train1,y_train)
